@@ -18,7 +18,7 @@
 * Remove all partitions on the disk using the "Disks" utility (might need reboot in some cases)
 * Open the terminal
 * Run the commands:
-  > scp -r jiar@192.168.1.100:~/Dropbox/Development/coreos .
+  > git clone https://github.com/hirro/coreos.git
   > cd coreos
-  > sudo ./coreos_install.sh -d /dev/sda -C stable -c machines.d/${host}.yaml
+  > sudo ./coreos-install -d /dev/sda -C stable -c machines.d/${host}.yaml
 

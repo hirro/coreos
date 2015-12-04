@@ -7,25 +7,32 @@ ssh_authorized_keys:
   - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC+NB2VqFJSnc+I6y1p/glStfGBkYUIx6ByBtWE+Oqqteszxnz48r5IxMTZbG/8Ie/Hin09IDUfCclv3YF0B4Lb5bWZYm7o8Bydxa2PXo6yETMCiSWdziMoC4zBKzZiK2FP5q13aUtO+S9q+DkeqpGYQYHpGPr13CIwIfvJdXWopEbhPRqxF7sfO8RlHlLAvMdAF32pHSpxLuLWOVgnCwIIoIBEHbsuLxmQtN5wtm4fJnIkE/IoVmQfduhwz1wZPgpxMxK9WITW9W0Y2D9UYSlEJyt0rOxMTXkSnaKD/pB1BE7tXQ3/8BAKxvgBwrdd8XJl7V4vMkyU9XPhFLwLGQyv
 
 coreos:
+  update:
+    reboot-strategy: "reboot"
   etcd2:
     # generate a new token for each unique cluster from https://discovery.etcd.io/new?size=3
-    # specify the initial size of your cluster with ?size=X
-    discovery: https://discovery.etcd.io/038b22bc41a3ecbbccc074ccd6718203
-    advertise-client-urls: http://%HOST_IP_ADDRESS%:2379,http://%HOST_IP_ADDRESS%:4001
-    initial-advertise-peer-urls: http://%HOST_IP_ADDRESS%:2380
+    discovery: https://discovery.etcd.io/6cc9a2f3593f4ece99170833c0c7812f
+    # multi-region and multi-cloud deployments need to use $public_ipv4
+    advertise-client-urls: "http://192.168.1.5:2379"
+    initial-advertise-peer-urls: "http://192.168.1.5:2380"
     # listen on both the official ports and the legacy ports
     # legacy ports can be omitted if your application doesn't depend on them
-    listen-client-urls: http://0.0.0.0:2379,http://0.0.0.0:4001
-    listen-peer-urls: http://%HOST_IP_ADDRESS%:2380
+    listen-client-urls: "http://0.0.0.0:2379,http://0.0.0.0:4001"
+    listen-peer-urls: "http://192.168.1.5:2380,http://192.168.1.5:7001"
+  # fleet:
+  #   public-ip: "192.168.1.5"
+  #   metadata: "region=se-varmdo"
+  # flannel:
+  #   etcd_prefix: "/coreos.com/network2"
   units:
-    - name: etcd2.service
-      command: start
-    - name: fleet.service
-      command: start
-    - name: flanneld.service
-      command: start
-      drop-ins:
-      - name: 50-network-config.conf
-        content: |
-          [Service]
-          ExecStartPre=/usr/bin/etcdctl set /coreos.com/network/config '{"Network":"10.1.0.0/16", "Backend": {"Type": "vxlan"}}'
+    - name: "etcd2.service"
+      command: "start"
+    # - name: "fleet.service"
+    #   command: "start"
+    # - name: "flanneld.service"
+    #   command: "start"
+    #   drop-ins:
+    #   - name: 50-network-config.conf
+    #     content: |
+    #       [Service]
+    #       ExecStartPre=/usr/bin/etcdctl set /coreos.com/network/config '{"Network":"192.168.1.0/16", "Backend": {"Type": "vxlan"}}'
