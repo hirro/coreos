@@ -6,8 +6,8 @@ coreos:
     reboot-strategy: "reboot"
   etcd2:
     # generate a new token for each unique cluster from https://discovery.etcd.io/new?size=2
-    # NOTE: Cluster is not ready until all has joined
-    discovery: "https://discovery.etcd.io/63edf410c61f80b9d5f3b38c01f8dc71"
+    # NOTE: Cluster is not ready until all has joined (https://github.com/coreos/bugs/issues/345)
+    discovery: "https://discovery.etcd.io/752e3e819f01ea8442570c81641aef10"
     # multi-region and multi-cloud deployments need to use $public_ipv4
     advertise-client-urls: "http://192.168.1.5:2379"
     initial-advertise-peer-urls: "http://192.168.1.5:2380"

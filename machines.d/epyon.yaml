@@ -6,8 +6,8 @@ coreos:
     reboot-strategy: "reboot"
   etcd2:
     # generate a new token for each unique cluster from https://discovery.etcd.io/new?size=2
-    # NOTE: Cluster is not ready until all has joined
-    discovery: "https://discovery.etcd.io/3c439de77b4985114c8623edc41a375b"
+    # NOTE: Cluster is not ready until all has joined (https://github.com/coreos/bugs/issues/345)
+    discovery: "https://discovery.etcd.io/752e3e819f01ea8442570c81641aef10"
     # multi-region and multi-cloud deployments need to use $public_ipv4
     advertise-client-urls: "http://192.168.1.4:2379"
     initial-advertise-peer-urls: "http://192.168.1.4:2380"
@@ -15,11 +15,11 @@ coreos:
     # legacy ports can be omitted if your application doesn't depend on them
     listen-client-urls: "http://0.0.0.0:2379,http://0.0.0.0:4001"
     listen-peer-urls: "http://192.168.1.4:2380,http://192.168.1.4:7001"
-  # fleet:
-  #   public-ip: "192.168.1.4"
-  #   metadata: "region=se-varmdo"
-  # flannel:
-  #   etcd_prefix: "/coreos.com/network2"
+  fleet:
+    public-ip: "192.168.1.4"
+    metadata: "region=se-varmdo"
+  flannel:
+    etcd_prefix: "/coreos.com/network2"
   units:
     - name: "etcd2.service"
       command: "start"

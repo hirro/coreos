@@ -1,13 +1,44 @@
 #cloud-config
 hostname: unicorn
 
-# include one or more SSH public keys
-ssh_authorized_keys:
-  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCgaWpINrWAhejjsHIqrjlrcqBx9pPrIyFmgZ8AhNV0f7LKtGvtstk31p6yJzD8V9M/GPVN3EcsabaunL1R8QWl3G4rFdR75iTeJ+L2woY8fumFcc4D7w7UOkn1Rq0TYaGTwKAeCbEMYLtxS4Jycb1u3J1gCxlBH/ivrf6JSpZp1fFqq7nMmLQLN0xCvkSF8sKbMYWAlhnPSkCPiW4xlwbb8pU0+/BdJF/+O80SakHXerzEg/DtNLvMP6E3Si7fCq5YZy1SMRR1x34ThGRJUF8gr2ywVMLAE/p32PcQVZN7osNjczybLRA8HHZxFd8VEdfPUQK6ledd/ve8girmgINB
-  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC+NB2VqFJSnc+I6y1p/glStfGBkYUIx6ByBtWE+Oqqteszxnz48r5IxMTZbG/8Ie/Hin09IDUfCclv3YF0B4Lb5bWZYm7o8Bydxa2PXo6yETMCiSWdziMoC4zBKzZiK2FP5q13aUtO+S9q+DkeqpGYQYHpGPr13CIwIfvJdXWopEbhPRqxF7sfO8RlHlLAvMdAF32pHSpxLuLWOVgnCwIIoIBEHbsuLxmQtN5wtm4fJnIkE/IoVmQfduhwz1wZPgpxMxK9WITW9W0Y2D9UYSlEJyt0rOxMTXkSnaKD/pB1BE7tXQ3/8BAKxvgBwrdd8XJl7V4vMkyU9XPhFLwLGQyv
-
 coreos:
-  etcd:
+  update:
+    reboot-strategy: "reboot"
+  etcd2:
     # generate a new token for each unique cluster from https://discovery.etcd.io/new?size=2
-    # specify the initial size of your cluster with ?size=X
-    discovery: https://discovery.etcd.io/038b22bc41a3ecbbccc074ccd6718203
+    # NOTE: Cluster is not ready until all has joined (https://github.com/coreos/bugs/issues/345)
+    discovery: "https://discovery.etcd.io/752e3e819f01ea8442570c81641aef10"
+    # multi-region and multi-cloud deployments need to use $public_ipv4
+    advertise-client-urls: "http://192.168.1.2:2379"
+    initial-advertise-peer-urls: "http://192.168.1.2:2380"
+    # listen on both the official ports and the legacy ports
+    # legacy ports can be omitted if your application doesn't depend on them
+    listen-client-urls: "http://0.0.0.0:2379,http://0.0.0.0:4001"
+    listen-peer-urls: "http://192.168.1.2:2380,http://192.168.1.2:7001"
+  fleet:
+    public-ip: "192.168.1.2"
+    metadata: "region=se-varmdo"
+  flannel:
+    etcd_prefix: "/coreos.com/network2"
+  units:
+    - name: "etcd2.service"
+      command: "start"
+    - name: "fleet.service"
+      command: "start"
+    - name: "flanneld.service"
+      command: "start"
+      drop-ins:
+      - name: 50-network-config.conf
+        content: |
+          [Service]
+          ExecStartPre=/usr/bin/etcdctl set /coreos.com/network/config '{"Network":"192.168.1.0/16", "Backend": {"Type": "vxlan"}}'
+
+users:
+  - name: "jiar"
+    passwd: "$1$nHTfZRWl$VsgjSbKTWUdLp6cZvGO4k."
+    groups:
+     - "sudo"
+     - "docker"
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCgaWpINrWAhejjsHIqrjlrcqBx9pPrIyFmgZ8AhNV0f7LKtGvtstk31p6yJzD8V9M/GPVN3EcsabaunL1R8QWl3G4rFdR75iTeJ+L2woY8fumFcc4D7w7UOkn1Rq0TYaGTwKAeCbEMYLtxS4Jycb1u3J1gCxlBH/ivrf6JSpZp1fFqq7nMmLQLN0xCvkSF8sKbMYWAlhnPSkCPiW4xlwbb8pU0+/BdJF/+O80SakHXerzEg/DtNLvMP6E3Si7fCq5YZy1SMRR1x34ThGRJUF8gr2ywVMLAE/p32PcQVZN7osNjczybLRA8HHZxFd8VEdfPUQK6ledd/ve8girmgINB
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC+NB2VqFJSnc+I6y1p/glStfGBkYUIx6ByBtWE+Oqqteszxnz48r5IxMTZbG/8Ie/Hin09IDUfCclv3YF0B4Lb5bWZYm7o8Bydxa2PXo6yETMCiSWdziMoC4zBKzZiK2FP5q13aUtO+S9q+DkeqpGYQYHpGPr13CIwIfvJdXWopEbhPRqxF7sfO8RlHlLAvMdAF32pHSpxLuLWOVgnCwIIoIBEHbsuLxmQtN5wtm4fJnIkE/IoVmQfduhwz1wZPgpxMxK9WITW9W0Y2D9UYSlEJyt0rOxMTXkSnaKD/pB1BE7tXQ3/8BAKxvgBwrdd8XJl7V4vMkyU9XPhFLwLGQyv
