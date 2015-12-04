@@ -1,0 +1,13 @@
+#cloud-config
+hostname: unicorn
+
+# include one or more SSH public keys
+ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCgaWpINrWAhejjsHIqrjlrcqBx9pPrIyFmgZ8AhNV0f7LKtGvtstk31p6yJzD8V9M/GPVN3EcsabaunL1R8QWl3G4rFdR75iTeJ+L2woY8fumFcc4D7w7UOkn1Rq0TYaGTwKAeCbEMYLtxS4Jycb1u3J1gCxlBH/ivrf6JSpZp1fFqq7nMmLQLN0xCvkSF8sKbMYWAlhnPSkCPiW4xlwbb8pU0+/BdJF/+O80SakHXerzEg/DtNLvMP6E3Si7fCq5YZy1SMRR1x34ThGRJUF8gr2ywVMLAE/p32PcQVZN7osNjczybLRA8HHZxFd8VEdfPUQK6ledd/ve8girmgINB
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC+NB2VqFJSnc+I6y1p/glStfGBkYUIx6ByBtWE+Oqqteszxnz48r5IxMTZbG/8Ie/Hin09IDUfCclv3YF0B4Lb5bWZYm7o8Bydxa2PXo6yETMCiSWdziMoC4zBKzZiK2FP5q13aUtO+S9q+DkeqpGYQYHpGPr13CIwIfvJdXWopEbhPRqxF7sfO8RlHlLAvMdAF32pHSpxLuLWOVgnCwIIoIBEHbsuLxmQtN5wtm4fJnIkE/IoVmQfduhwz1wZPgpxMxK9WITW9W0Y2D9UYSlEJyt0rOxMTXkSnaKD/pB1BE7tXQ3/8BAKxvgBwrdd8XJl7V4vMkyU9XPhFLwLGQyv
+
+coreos:
+  etcd:
+    # generate a new token for each unique cluster from https://discovery.etcd.io/new?size=2
+    # specify the initial size of your cluster with ?size=X
+    discovery: https://discovery.etcd.io/038b22bc41a3ecbbccc074ccd6718203
