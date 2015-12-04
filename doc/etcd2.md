@@ -13,4 +13,7 @@ sudo systemctl restart etcd2.service
 
 ## Logs
 * journalctl -xe
-* 
+* journalctl -f
+* sudo journalctl -u etcd2
+
+
