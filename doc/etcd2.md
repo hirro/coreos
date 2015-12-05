@@ -12,8 +12,9 @@ sudo systemctl restart etcd2.service
 * /run/systemd/system/etcd2.service.d/20-cloudinit.conf
 
 ## Logs
-* journalctl -xe
-* journalctl -f
+* sudo journalctl -xe
+* sudo journalctl -f
 * sudo journalctl -u etcd2
+* sudo journalctl -u etcd2 -f
 
 
