@@ -43,6 +43,9 @@ The CoreOS installation is started after booting from a CentOS7 Live CD.
 
            > etcdctl set /message "Hello world"
            Hello world
+           
+           > etcdctl get /message
+           Hello world
  2. Check fleet
 
            > fleetctl list-machines
