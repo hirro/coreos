@@ -6,10 +6,9 @@ I used the following hardware:
 * 16GB RAM
 * 250GB SSD
 
-# Burn Live CD USB
-The CoreOS installation is started after booting from a CentOS7 Live CD.
+# Burn Live CD USB on OSX
+The CoreOS installation is started after booting from a CentOS7 Live CD. 
 
-This is what I did:
  1. Download the Live CD:
           
           wget http://buildlogs.centos.org/centos/7/isos/x86_64/CentOS-7-livecd-x86_64.iso
