@@ -37,4 +37,19 @@ This is what I did:
            unzip master.zip
            cd coreos-master/target/$HOST
            sudo ./install.sh
+6. Reboot
 
+# Verify Installation
+ 1. Check etcd2
+
+           etcdctl set /message "Hello world"
+           Hello world
+ 2. Check fleet
+
+           > fleetctl list-machines
+           MACHINE		IP		METADATA
+           14fedb2d...	192.168.1.5	region=se-varmdo
+           2b321291...	192.168.1.4	region=se-varmdo
+           5db7dbb5...	192.168.1.2	region=se-varmdo
+           
+           
