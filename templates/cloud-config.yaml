@@ -1,5 +1,5 @@
 #cloud-config
-hostname: $hostname
+hostname: $HOSTNAME
 
 #  Add your public SSH key(s) here
 ssh_authorized_keys:
@@ -10,18 +10,18 @@ coreos:
   update:
     reboot-strategy: "reboot"
   etcd2:
-    # generate a new token for each unique cluster from https://discovery.etcd.io/new?size=$numberOfMachines
+    # generate a new token for each unique cluster from https://discovery.etcd.io/new?size=$NUMBER_OF_MACHINES
     # NOTE: Cluster is not ready until all has joined (https://github.com/coreos/bugs/issues/345)
-    discovery: "$discoveryToken"
+    discovery: "$DISCOVERY_TOKEN"
     # multi-region and multi-cloud deployments need to use $public_ipv4
-    advertise-client-urls: "http://$public_ipv4:2379"
-    initial-advertise-peer-urls: "http://$public_ipv4:2380"
+    advertise-client-urls: "http://$PUBLIC_IPV4:2379"
+    initial-advertise-peer-urls: "http://$PUBLIC_IPV4:2380"
     # listen on both the official ports and the legacy ports
     # legacy ports can be omitted if your application doesn't depend on them
     listen-client-urls: "http://0.0.0.0:2379,http://0.0.0.0:4001"
-    listen-peer-urls: "http://$public_ipv4:2380,http://$public_ipv4:7001"
+    listen-peer-urls: "http://$PUBLIC_IPV4:2380,http://$PUBLIC_IPV4:7001"
   fleet:
-    public-ip: "$public_ipv4"
+    public-ip: "$PUBLIC_IPV4"
     metadata: "region=se-varmdo"
   flannel:
     etcd_prefix: "/coreos.com/network2"
