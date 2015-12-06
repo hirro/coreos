@@ -36,14 +36,17 @@ def createCloudConfig( configuration, template, discoveryToken, numberOfMachines
 	with open(MACHINES_DIR + '/' + hostname + '.yaml','w') as f:
 		f.write(cloudConfig)
 
+def build():
+	with open("configuration.yaml", 'r') as machinesStream, open("cloud-config.yaml") as templateStream:
+		configurations = yaml.load(machinesStream)	
+		template = templateStream.read()
+
+		# Generate a discovery token
+		numberOfMachines = len(configurations['cluster'])
+		discoveryToken = createDiscoveryToken(numberOfMachines)
+
+		for configuration in configurations['cluster']:
+			createCloudConfig( configuration, template, discoveryToken, numberOfMachines )
+
 clean()
-with open("configuration.yaml", 'r') as machinesStream, open("cloud-config-template.yaml") as templateStream:
-	configurations = yaml.load(machinesStream)	
-	template = templateStream.read()
-
-	# Generate a discovery token
-	numberOfMachines = len(configurations['cluster'])
-	discoveryToken = createDiscoveryToken(numberOfMachines)
-
-	for configuration in configurations['cluster']:
-		createCloudConfig( configuration, template, discoveryToken, numberOfMachines )
+build()
