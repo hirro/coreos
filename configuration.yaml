@@ -1,0 +1,19 @@
+#cmacines
+
+# Defines the properties of the machines in the cluseter.
+# name: The name of the host (private_ipv4 and $public_ipv4 in template)
+# mad: The mac of the host
+# ip: The IP of the host
+
+
+cluster:
+  - hostname: "unicorn"
+    mac:  "c0:3f:d5:6b:d0:f5"
+    ip:   "192.168.1.2"
+  - hostname: "epyon"
+    mac:  "c0:3f:d5:62:b9:6c"
+    ip: "192.168.1.4"
+  - hostname: "zero"
+    mac:  "c0:3f:d5:6b:dc:79"
+    ip: "192.168.1.5"
+
