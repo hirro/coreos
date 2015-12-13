@@ -1,4 +1,4 @@
-#  CORE OS TROUBLESHOOTING
+#  ETCD2 TROUBLESHOOTING
 
 ## Github samples/deployment
 
