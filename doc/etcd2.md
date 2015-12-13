@@ -35,8 +35,9 @@ sudo systemctl restart etcd2.service
 * systemctl stop etcd2
 * Update token
       vi /run/systemd/system/etcd2.service.d/20-cloudinit.conf
-* rm -r /var/lib/etcd2/
-* systemctl daemon-reload && systemctl start etcd2
+*  rm -r /var/lib/etcd2/*
+* systemctl daemon-reload
+* systemctl start etcd2
 * journalctl -u etcd2 -f
 * 
 
@@ -51,7 +52,8 @@ Environment="ETCD_INITIAL_CLUSTER=unicorn=http://192.168.1.3:2380,epyon=http://1
 Environment="ETCD_INITIAL_CLUSTER_STATE=new"
 ~
 ~
-~
+## Manual update of CoreOS
+> update_engine_client -update
 ~
 ~
 ~
