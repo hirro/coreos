@@ -1,0 +1,622 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"log",
+				"logstash"
+			],
+			[
+				"logs",
+				"logstash-forwarder"
+			],
+			[
+				"m",
+				"msisdn"
+			],
+			[
+				"TOMCAT_",
+				"TOMCAT_INSTANCE_PATH"
+			],
+			[
+				"is",
+				"isActiveProject"
+			],
+			[
+				"curr",
+				"currentUser"
+			],
+			[
+				"get",
+				"getCurrentUser"
+			],
+			[
+				"model",
+				"modelName"
+			],
+			[
+				"ac",
+				"activeProjectId"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"res",
+				"resolveTimeEntry"
+			],
+			[
+				"p",
+				"promise"
+			],
+			[
+				"projec",
+				"projectList"
+			],
+			[
+				"proj",
+				"projectList"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"Time",
+				"TimeEntryController"
+			],
+			[
+				"Prj",
+				"ProjectController"
+			],
+			[
+				"Per",
+				"PersonController"
+			],
+			[
+				"Cu",
+				"CustomerController"
+			],
+			[
+				"A",
+				"AuthenticationController"
+			],
+			[
+				"Tps",
+				"TpsServiceImpl"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 227.0,
+		"last_filter": "j",
+		"selected_items":
+		[
+			[
+				"j",
+				"Indent JSON"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"xml",
+				"Indent XML"
+			],
+			[
+				"ind",
+				"Indent XML"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/jiar/git/worktajm/coreos",
+		"/Users/jiar/git/worktajm/coreos/target",
+		"/Users/jiar/git/worktajm/coreos/target/epyon"
+	],
+	"file_history":
+	[
+		"/Users/jiar/git/worktajm/docker/docker.sublime-project",
+		"/Users/jiar/git/worktajm/coreos/README.md",
+		"/Users/jiar/git/worktajm/coreos/doc/howto.md",
+		"/Users/jiar/git/worktajm/coreos/generate.py",
+		"/Users/jiar/git/worktajm/coreos/generate/generate.sh",
+		"/Users/jiar/git/worktajm/coreos/machines.d/epyon.yaml",
+		"/Users/jiar/git/worktajm/coreos/install.sh",
+		"/Users/jiar/git/worktajm/coreos/doc/etcd2.md",
+		"/Users/jiar/git/worktajm/coreos/machines.d/unicorn.yaml",
+		"/Users/jiar/git/worktajm/coreos/LICENSE.md",
+		"/Users/jiar/git/worktajm/coreos/machines.d/zero.yaml",
+		"/Users/jiar/Dropbox/Development/coreos/install.sh",
+		"/Users/jiar/tmp/log_short.txt",
+		"/Users/jiar/tmp/log_long.txt",
+		"/Users/jiar/git/mideye/plus-fenris/test/bin/create_pvs_data.rb",
+		"/Users/jiar/Desktop/stackdumps.log",
+		"/Users/jiar/Desktop/stackdumps2.log",
+		"/Users/jiar/Downloads/colors_deep_orange_orange.xml",
+		"/Users/jiar/Desktop/mideyer.log",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/client/app/dashboard/timeEntries/timeEntries.controller.js",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/node_modules/passport-google-oauth/lib/passport-google-oauth/oauth2.js",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/Gruntfile.js",
+		"/Users/jiar/tmp/jhipster/src/main/java/com/mycompany/myapp/config/CloudDatabaseConfiguration.java",
+		"/Users/jiar/tmp/jhipster/src/main/java/com/mycompany/myapp/config/CacheConfiguration.java",
+		"/Users/jiar/tmp/jhipster/src/main/java/com/mycompany/myapp/config/DatabaseConfiguration.java",
+		"/Users/jiar/tmp/jhipster/src/main/java/com/mycompany/myapp/config/MetricsConfiguration.java",
+		"/Users/jiar/git/mideye/push-smsc/docs/sql/pas/migrate.sql",
+		"/Users/jiar/git/mideye/push-smsc/docs/sql/all_entries.sql",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/13_logstash/Dockerfile",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/13_logstash/patterns/nginx",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/13_logstash/etc/logstash/logstash.conf",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/50_nginx/etc/nginx/conf.d/ssl.conf",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/11_dataelk/start.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/13_logstash/patterns/11-nginx.conf",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/docs/boot2docker.md",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/bin/setup_build_environment.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/bin/setup_gems.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/50_nginx/Dockerfile",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/50_nginx/start.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/14_kibana/start.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/92_logstash-forwarder/start.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/12_elasticsearch/Dockerfile",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/14_kibana/Dockerfile",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/92_logstash-forwarder/etc/logstash-forwarder/config.json",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/_90_elk/Dockerfile",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/13_logstash/start.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/_90_elk/etc/logstash.conf",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/_90_elk/start.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/92_logstash-forwarder/Dockerfile",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/92_lumberjack/start.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/92_lumberjack/etc/logstash-forwarder/config.json",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/_13_logstash/etc/logstash/logstash.conf",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/_13_logstash/Dockerfile",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/_13_logstash/start.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/12_logstash/etc/logstash/logstash.conf",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/12_logstash/Dockerfile",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/12_logstash/build.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/12_logstash/start.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/start.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/stop.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/cleanup-dangling.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/90_dataelk/build.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/90_dataelk/start.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/91_elk/start.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/92_lumberjack/build.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/91_kibana/start.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/91_kibana/build.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/11_elastic_search/build.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/11_elasticsearch/Dockerfile",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/11_elasticsearch/build.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/11_elasticsearch/start.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/91_kibana/Dockerfile",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/92_lumberjack/Dockerfile",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/91_elk/Dockerfile",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/91_elk/etc/logstash/logstash.conf",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/90_dataelk/logstash.conf",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/90_dataelk/Dockerfile",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/90_elk/start.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/90_lumberjack/start.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/90_logstash/start.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/10_mongodb/start.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/20_node/Dockerfile",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/90_logstash/build.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/90_logstash/Dockerfile",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/90_elk/Dockerfile",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/90_lumberjack/build.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/90_elk/etc/logstash.conf",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/20_node/start.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/10_mongodb/Dockerfile",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/90_lumberjack/Dockerfile",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/90_lumberjack/config.json",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/build.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/server/api/user/user.model.spec.js",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/devops/images/90_node/build.sh",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/dist/package.json",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/server/config/environment/production.js",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/server/config/environment/docker.json",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/server/api/thing/thing.spec.js",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/server/config/environment/development.js",
+		"/Users/jiar/git/worktajm/yo-worktajm/master/Dockerfile",
+		"/Users/jiar/git/worktajm/be-worktajm/jhipster/devops/nginx/Dockerfile",
+		"/Users/jiar/git/worktajm/be-worktajm/jhipster/conf/logstash-forwarder/logstash-forwarder.conf",
+		"/Users/jiar/git/worktajm/be-worktajm/jhipster/conf/logstash-forwarder/logstash-spring-boot.conf",
+		"/Users/jiar/git/worktajm/be-worktajm/jhipster/src/main/resources/logback.xml",
+		"/Users/jiar/git/worktajm/be-worktajm/jhipster/pom.xml",
+		"/Users/jiar/git/worktajm/be-worktajm/jhipster/.jhipster/TimeEntry.json",
+		"/Users/jiar/git/worktajm/be-worktajm/jhipster/src/main/resources/config/application-prod.yml",
+		"/Users/jiar/git/worktajm/be-worktajm/jhipster/src/main/java/com/arnellconsulting/worktajm/domain/Organization.java",
+		"/Users/jiar/git/worktajm/be-worktajm/jhipster/src/main/java/com/arnellconsulting/worktajm/domain/Customer.java",
+		"/Users/jiar/git/worktajm/be-worktajm/jhipster/src/main/java/com/arnellconsulting/worktajm/domain/Project.java",
+		"/Users/jiar/git/worktajm/be-worktajm/jhipster/.jhipster/Worker.json",
+		"/Users/jiar/git/mideye/push-smsc/smsc-server/src/main/java/com/mideye/pushserver/pusher/AndroidGcmPusher.java",
+		"/Users/jiar/git/mideye/push-smsc/smsc-server/src/main/resources/config/application-prod.yml",
+		"/Users/jiar/git/mideye/push-smsc/smsc-server/src/main/resources/config/application.yml",
+		"/Users/jiar/git/mideye/push-smsc/docs/test/mountebank/wns-mock.json",
+		"/Users/jiar/git/mideye/push-smsc/docs/sql/device.txt",
+		"/Users/jiar/git/mideye/push-smsc/docs/test/mountebank/README.md",
+		"/Users/jiar/git/mideye/push-smsc/docs/test/mountebank/reload.sh",
+		"/Users/jiar/git/mideye/push-smsc/docs/test/mountebank/apns-mock.json",
+		"/Users/jiar/git/mideye/push-smsc/docs/test/mountebank/gcm-mock.json",
+		"/Users/jiar/git/mideye/push-smsc/docs/test/mountebank/pushserver-mock.json",
+		"/Users/jiar/git/mideye/push-smsc/docs/test/mountebank/pvs-mock.json",
+		"/Users/jiar/git/mideye/push-smsc/docs/test/mountebank/ms-pushserver-mock.json",
+		"/Users/jiar/git/mideye/push-smsc/docs/test/mountebank/mb.log",
+		"/Users/jiar/git/mideye/push-smsc/docs/test/mountebank/http-mock.json",
+		"/Users/jiar/git/mideye/push-smsc/docs/test/mountebank/run.sh",
+		"/Users/jiar/git/mideye/push-smsc/docs/test/mountebank/monitor.sh",
+		"/Users/jiar/git/mideye/plus-fenris/test/conf/tomcat/1/pasConfig.json"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"*.jade",
+			"*.js",
+			"",
+			"/Users/jiar/git/mideye/push-smsc",
+			"",
+			"-/Users/jiar/git/yo-worktajm/node/client/bower_components/*",
+			"-/Users/jiar/git/yo-worktajm/node/client/bower_components",
+			"",
+			"*.java",
+			"*",
+			"*.java",
+			"",
+			"*.java"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"deploy",
+			"192.168.1.5",
+			"start",
+			"git",
+			"Attempt to invoke virtual method 'boolean java.lang.Boolean.booleanValue()' on a null object reference",
+			"List<Me>",
+			"timeEntry",
+			"TimeEntry",
+			"project",
+			"Project",
+			"android:",
+			"=",
+			"mideye",
+			"counter_generator",
+			"activation_orders_columns",
+			"device_info_alternatives",
+			"device_infos",
+			"createDeviceInfo",
+			"Rand",
+			"} ",
+			"|",
+			"{\\\\\\\"",
+			"\"",
+			"# ",
+			"|",
+			"| ",
+			"|",
+			"settings",
+			"karma",
+			"karam",
+			".then(",
+			"start",
+			"karma",
+			"server",
+			"HealthCheckRegistry",
+			"hikaricp",
+			"HealthIndicator",
+			"HealthIndicatorAutoConfigurationProperties",
+			"CompositeHealthIndicator",
+			"HealthEndpoint",
+			"Aggregator",
+			"HealthAggregator",
+			"dropwizard-metrics.version",
+			"        <dependency>\n            <groupId>io.dropwizard.metrics</groupId>\n            <artifactId>metrics-core</artifactId>\n        </dependency>\n        <dependency>\n            <groupId>io.dropwizard.metrics</groupId>\n            <artifactId>metrics-annotation</artifactId>\n            <version>${dropwizard-metrics.version}</version>\n        </dependency>\n        <dependency>\n            <groupId>io.dropwizard.metrics</groupId>\n            <artifactId>metrics-graphite</artifactId>\n        </dependency>\n        <dependency>\n            <groupId>io.dropwizard.metrics</groupId>\n            <artifactId>metrics-healthchecks</artifactId>\n            <version>${dropwizard-metrics.version}</version>\n        </dependency>\n        <dependency>\n            <groupId>io.dropwizard.metrics</groupId>\n            <artifactId>metrics-json</artifactId>\n            <version>${dropwizard-metrics.version}</version>\n        </dependency>\n        <dependency>\n            <groupId>io.dropwizard.metrics</groupId>\n            <artifactId>metrics-jvm</artifactId>\n            <version>${dropwizard-metrics.version}</version>\n        </dependency>\n        <dependency>\n            <groupId>io.dropwizard.metrics</groupId>\n            <artifactId>metrics-servlet</artifactId>\n            <version>${dropwizard-metrics.version}</version>\n        </dependency>\n        <dependency>\n            <groupId>io.dropwizard.metrics</groupId>\n            <artifactId>metrics-servlets</artifactId>\n            <exclusions>\n                <exclusion>\n                    <artifactId>metrics-healthchecks</artifactId>\n                    <groupId>io.dropwizard.metrics</groupId>\n                </exclusion>\n            </exclusions>\n        </dependency>",
+			"Health.Builder",
+			"HealthAggregator",
+			"HealthIndicatorConfiguration",
+			"health",
+			"CLoud",
+			"datasource",
+			"JHipsterHealthIndicatorConfiguration",
+			"health",
+			"HealthIndicator",
+			"DatabaseHealthIndicator",
+			"hikari",
+			"health",
+			"actua",
+			"hazel",
+			"hikari",
+			"mountebank",
+			"montebank",
+			"/etc/logstash/",
+			"lumberjack",
+			"rw",
+			"elasticsearch",
+			"\n    ",
+			"FACEBOOK_ID",
+			"Timer",
+			"listOnTimeout",
+			"Timer.listOnTimeout",
+			"time",
+			"onTim",
+			"before all",
+			"before",
+			"$APP_PATH",
+			"public",
+			"0",
+			"serve:",
+			"serve",
+			"/*;",
+			"encoder",
+			"tester",
+			"port",
+			"elast",
+			"remoteHost",
+			"logback",
+			":space:",
+			"\\s",
+			"AUTOCURL",
+			"verification id:",
+			"\n         ",
+			"\\n",
+			"curl",
+			"404",
+			"requried",
+			"parameters",
+			"X-NotificationClass",
+			"\"predicates\": [ { \"not\": { \"exists\": { \"headers\": {  ",
+			"X-MessageID",
+			"FENRIS",
+			"Fenris",
+			"FENRIS",
+			"FENRIS_PATH",
+			".0.0:61",
+			"61616",
+			"brokerUrl",
+			"tcp://127.0.0.1:61616",
+			"61616",
+			"jdbc/PvsDB1",
+			"deferred",
+			"def",
+			"[ ][ ]*$",
+			"function[(]",
+			"function(",
+			"function[(]",
+			"[ ][ ]*$",
+			"[ ]*$",
+			"iit",
+			"getCurrentUser",
+			"syncUpdatesOnObject",
+			"saveActiveTimeEntry",
+			"getTimeEntries",
+			"syncUpdates",
+			"socket.service",
+			"timeentry.socket",
+			"result",
+			"user",
+			"/api/users/me/activeTimeentry"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"LOG.warn",
+			"LOG.error",
+			"LOG.debug",
+			"private static final Logger LOG",
+			"   "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 230.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "coreos.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ports",
+				"test/doc/ports.md"
+			],
+			[
+				"oaut",
+				"node_modules/passport-google-oauth/lib/passport-google-oauth/oauth2.js"
+			],
+			[
+				"index",
+				"client/index.html"
+			],
+			[
+				"user",
+				"server/api/user/user.model.spec.js"
+			],
+			[
+				"things",
+				"server/api/thing/thing.spec.js"
+			],
+			[
+				"logbac",
+				"src/main/resources/logback.xml"
+			],
+			[
+				"context",
+				"instances/tomcat/1/conf/context.xml"
+			],
+			[
+				"pvsconfig.json",
+				"imp/server/PvsProd/PvsProd/src/main/webapp/WEB-INF/pvsConfig.json"
+			],
+			[
+				"wor",
+				"client/components/worktajm/worktajm.service.spec.js"
+			],
+			[
+				"timer",
+				"server/api/timeentry/timeentry.controller.js"
+			],
+			[
+				"projects.con",
+				"client/app/dashboard/projects/projects.controller.js"
+			],
+			[
+				"login",
+				"app/account/login/login.jade"
+			],
+			[
+				"bower",
+				"bower.json"
+			],
+			[
+				"invoice",
+				"app/views/reports/invoice.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/git/worktajm/docker/docker.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 293.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
