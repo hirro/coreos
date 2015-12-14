@@ -22,3 +22,7 @@ zero:
 /var/lib/etcd2/
 /var/lib/etcd2/member
 
+
+# How to update hosts file accross machines?
+http://www.maori.geek.nz/coreos-manage-etchosts/
+
